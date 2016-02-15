@@ -4,6 +4,7 @@ var controller = Botkit.slackbot({ debug: false })
 
 beepboop.start(controller, {})
 
+// just say something
 controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'You smart my friend')
 })
