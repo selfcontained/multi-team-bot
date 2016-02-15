@@ -6,5 +6,5 @@ beepboop.start(controller, {})
 
 // just say something
 controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
-  bot.reply(message, 'You smart my friend')
+  bot.reply(message, 'You very smart my friend')
 })
