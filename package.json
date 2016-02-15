@@ -1,0 +1,23 @@
+{
+  "name": "multi-team-bot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbrevoort/multi-team-bot.git"
+  },
+  "author": "Mike Brevoort",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mbrevoort/multi-team-bot/issues"
+  },
+  "homepage": "https://github.com/mbrevoort/multi-team-bot#readme",
+  "dependencies": {
+    "beepboop": "0.0.1",
+    "botkit": "0.0.6"
+  }
+}
