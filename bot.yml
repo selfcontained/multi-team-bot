@@ -1,0 +1,7 @@
+name: Multi Party
+description: A multi-team test bot
+config:
+  - name: FOO
+    friendly_name: Foo
+    info: Just some test config value
+    global: true
