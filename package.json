@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/mbrevoort/multi-team-bot#readme",
   "dependencies": {
-    "beepboop": "0.0.2",
+    "beepboop": "0.0.3",
     "botkit": "0.0.6"
   }
 }
