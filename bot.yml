@@ -5,3 +5,6 @@ config:
     friendly_name: Foo
     info: Just some test config value
     global: true
+  - name: LOCAL
+    friendly_name: A local value
+    info: Just a local test config value
