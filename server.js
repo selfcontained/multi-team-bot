@@ -1,6 +1,6 @@
 var Botkit = require('botkit')
 var controller = Botkit.slackbot({ debug: false })
-var beepboop = require('beepboop-botkit').start(controller)
+var beepboop = require('beepboop-botkit').start(controller, {})
 
 var run = false
 var data = {}
