@@ -3,8 +3,8 @@ var beepboop = require('beepboop')
 var controller = Botkit.slackbot({ debug: false })
 
 var run = false
-var fib = [0, 1]
-var i = 2
+var data = []
+var i = 0
 
 beepboop.start(controller, {})
 
@@ -26,12 +26,11 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
 
 function start () {
   if (run) {
+    data[i] = 'mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs'
     i = i + 1
-    fib[i] = fib[i - 2] + fib[i - 1]
-    console.log(i, ' fib = ', fib[i])
     setTimeout(start, 1)
   } else {
-    fib = [0, 1]
-    i = 2
+    data = []
+    i = 0
   }
 }
