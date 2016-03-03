@@ -6,11 +6,6 @@ var run = false
 
 beepboop.start(controller, {})
 
-// just say something
-controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
-  bot.reply(message, 'You very smart my friend')
-})
-
 controller.hears('start', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'Here goes')
   run = true
@@ -20,6 +15,11 @@ controller.hears('start', 'direct_message,direct_mention', function (bot, messag
 controller.hears('stop', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'stopping')
   run = false
+})
+
+// just say something
+controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
+  bot.reply(message, 'You very smart my friend')
 })
 
 function start () {
