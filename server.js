@@ -1,11 +1,9 @@
 var Botkit = require('botkit')
-var beepboop = require('beepboop')
 var controller = Botkit.slackbot({ debug: false })
+var beepboop = require('beepboop-botkit').start(controller)
 
 var run = false
 var data = {}
-
-beepboop.start(controller, {})
 
 controller.hears('start', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'Here goes')
