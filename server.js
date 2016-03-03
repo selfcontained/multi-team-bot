@@ -19,6 +19,10 @@ controller.hears('stop', 'direct_message,direct_mention', function (bot, message
   run = false
 })
 
+controller.hears('stat', 'direct_message,direct_mention', function (bot, message) {
+  bot.reply(message, i, data[i])
+})
+
 // just say something
 controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'You very smart my friend')
