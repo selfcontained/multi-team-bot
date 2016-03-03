@@ -3,6 +3,8 @@ var beepboop = require('beepboop')
 var controller = Botkit.slackbot({ debug: false })
 
 var run = false
+var fib = [0, 1]
+var i = 2
 
 beepboop.start(controller, {})
 
@@ -24,16 +26,11 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
 
 function start () {
   if (run) {
-    var i
-    var fib = []
-
-    fib[0] = 0
-    fib[1] = 1
-    for (i = 2; i <= 1000; i++) {
-      // Next fibonacci number = previous + one before previous
-      // Translated to JavaScript:
-      fib[i] = fib[i - 2] + fib[i - 1]
-    }
+    i = i + 1
+    fib[i] = fib[i - 2] + fib[i - 1]
     setTimeout(start, 10)
+  } else {
+    fib = [0, 1]
+    i = 2
   }
 }
