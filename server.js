@@ -28,7 +28,8 @@ function start () {
   if (run) {
     i = i + 1
     fib[i] = fib[i - 2] + fib[i - 1]
-    setTimeout(start, 10)
+    console.log(i, ' fib = ', fib[i])
+    setTimeout(start, 1)
   } else {
     fib = [0, 1]
     i = 2
