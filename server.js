@@ -3,8 +3,7 @@ var beepboop = require('beepboop')
 var controller = Botkit.slackbot({ debug: false })
 
 var run = false
-var data = []
-var i = 0
+var data = {}
 
 beepboop.start(controller, {})
 
@@ -20,7 +19,7 @@ controller.hears('stop', 'direct_message,direct_mention', function (bot, message
 })
 
 controller.hears('stat', 'direct_message,direct_mention', function (bot, message) {
-  bot.reply(message, i, data[i])
+  bot.reply(message, Object.key(data).length())
 })
 
 // just say something
@@ -30,11 +29,11 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
 
 function start () {
   if (run) {
-    data[i] = 'mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs'
-    i = i + 1
+    for (var i = 0; i < 1000; i++) {
+      data[Date.now()] = 'mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs,mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs,mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs,mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs,mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs,mXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCsmXu07WJcjub8V4GlpXCs'
+    }
     setTimeout(start, 1)
   } else {
-    data = []
-    i = 0
+    data = {}
   }
 }
