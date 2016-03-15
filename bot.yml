@@ -1,4 +1,4 @@
-name: Multi Party Brad
+name: Multi Party
 description: A multi-team test bot
 config:
   - name: FOO
