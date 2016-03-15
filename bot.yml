@@ -8,3 +8,7 @@ config:
   - name: LOCAL
     friendly_name: A local value
     info: Just a local test config value
+    default: Vanilla Ice
+  - name: LOCAL_SECRET
+    friendly_name: A secret local value
+    info: Just a local test config value
