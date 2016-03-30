@@ -12,3 +12,4 @@ config:
   - name: LOCAL_SECRET
     friendly_name: A secret local value
     info: Just a local test config value
+    type: secret
