@@ -9,6 +9,7 @@ beepboop.on('error', console.error.bind(console))
 
 setInterval(function () {
   console.log('Logging some things: ' + Date.now())
+  console.log('Logging some more things')
 }, 5000)
 
 var run = false
